@@ -1,0 +1,34 @@
+.movie-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.movie-list__item{
+	width: 33.333%;
+	min-width: 250px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.movie-list__poster{
+	display: block;
+	width: 100%;
+}
+
+.movie-list__title{
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 10px;
+	background: #445656;
+	flex: 1 1 100%;
+	transition: 0.4s ease-out;
+}
+
+.movie-list__item_hovered:hover .movie-list__title_hovered{
+	background: #fff;
+	color: #223343;
+}
