@@ -17,12 +17,10 @@ class App extends React.Component{
     }
   }
 
-  handleSearch = e => {
-
-      axios(this.state.apiurl + "&s=" + e).then(({data}) => {
+  componentDidUpdate(){
+    axios(this.state.apiurl + "&s=" + this.props.search).then(({data}) => {
         this.props.setResultQueryList(data.Search);
       });
-      
   }
 
   render(){
@@ -35,7 +33,8 @@ class App extends React.Component{
                   <header className="title">
                     <h1 className="title__text">Фильмы</h1> 
                   </header>
-                  <Search handleSearch={this.handleSearch} apiurl={this.state.apiurl}/><MovieList/>
+                  <Search/>
+                  <MovieList/>
                 </div>} 
               />
     

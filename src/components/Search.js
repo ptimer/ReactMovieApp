@@ -7,12 +7,9 @@ import {setSearchValue} from "../redux/actions";
 class Search extends React.Component{
 	constructor(props){
 		super(props);
-		this.state = {input: ""}
 	}
 
 	updateSearch = input => {
-		this.setState({ input });
-		this.props.handleSearch(input);
 		this.props.setSearchValue(input);
 	}
 
